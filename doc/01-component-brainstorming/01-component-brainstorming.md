@@ -1,12 +1,11 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Matt Wang
+- **Dot Number**: Wang.18723
+- **Due Date**: 2/6/2026
 
 ## Assignment Overview
 
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,7 +28,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -52,7 +50,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
 
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
@@ -67,7 +64,6 @@ project. Specifically, students should be able to:
 
 ## Assignment Rubric: 10 Points
 
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,15 +102,11 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+
+I like music and play the piano. I like to play new stuff on a piano and experiment with music. I also play a lot of chess and am pretty good at it. I like gaming a lot too. I don't know really what my career goals are, but I hope to be able to create new stuff that I'm proud of. I like puzzles and logic games a lot, like crosswords and daily games.
 
 ## Assignment
 
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
@@ -122,7 +114,6 @@ that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
 
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -143,7 +134,6 @@ about different ways you might allow a client to manipulate your component.
 
 ### Example Component
 
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -211,68 +201,94 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: Complex Number
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Models a complex number with a real and imaginary component. The kernel methods will provide the minimum needed to do all of the remaining relevant operations on a complex number (natural number operations and some others I guess).
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void add(int r, int i)`: adds r to the real component of this and i to the imaginary component of this
+    - `void multiply(int r, int i)`: multiplies (this.real + this.imag * i) * (r + i * i) to set this.real to (#this.real*r-#this.imag*i) and this.imag to (#this.real * i + #this.imag * r)
+    - `void conjugate()`: changes this to the conjugate, so this.imag = -#this.imag
+    - `Complex real()`: returns the real component of this
+    - `Complex imaginary()`: returns the imaginary component of this
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `double magnitude()`: returns the magnitude of this
+    - `void add(Complex n)`: overload add for complex
+    - `void multiply(Complex n)`: overload multiply for complex
+    - `void divide(Complex n)` : this = #this / n
+    - `void subtract(Complex n)`: this = #this - n
+    - `void copyFrom(Complex n)`: copies n into this
+    - `void neg()`: flips the signs of this.real and this.imag
+    - `void inverse()`: makes this inversed
+    - `boolean isReal()`: returns if this only has real component
+    - `boolean isImaginary()`: returns if this only has imaginary component
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - It would be mutable since the operations change its value
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - There might be an internal class to store 2 different numbers, or 2 numbers could be the representation
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Probably Not
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I think having the ability to access the components and add, multiply, and find conjugate should be enough. Subtract would be adding the negative of the parameter, divide and inverse should be possible using conjugates.
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: Alphabet Soup
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Funny little structure that can populate letters in no particular order relatively randomly
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `char removeAny()` - returns a random letter in the soup and removes it
+    - `void add()` - adds a random letter to the soup
+    - `int size()` - returns the number of letters in soup
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+    - `void addCan()` - adds a random number between 50-100 random letters to the soup
+    - `void eatSpoon()` - removes 20 random letters, but since they are eaten, they are not accessible
+    - `boolean isEmpty()` - returns true if soup has no letters
+    - `int numberOf(char c)` - returns number of times c is in soup
+    - `String makeWord(int len)` - takes len random letters and returns a 'word' made from them (not a real word)
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
-  - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, since almost all of the methods change the contents of the object
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Maybe instead of char, each letter can be represented by an internal class, but probably not necessary
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don't think so but maybe
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - addCan() and eatSpoon() are just repeating add and removeAny a lot. isEmpty can be made using size. makeWord is also possible with removeAny, and numberOf should be fine since removeAny and size are enough to iterate through the whole thing like a set
+
+- Component Design #3: Chess Position
+  - **Description**:
+    - Visualization for a chess position with 64 squares occupied by pieces. Very basic, since I don't want to implement the whole logic of chess, but will have ability to move, add, remove pieces and count material
+  - **Kernel Methods**:
+    - void add(Piece p, int x, int y) - adds p to square (x,y), removing anything that was there before
+    - Piece remove(int x, int y) - makes (x,y) empty and returns piece on there
+    - boolean isEmpty(int x, int y) - returns if (x,y) was empty
+    - Piece pieceAt(int x, int y) - returns the piece at (x,y)
+  - **Secondary Methods**:
+    - void move(int x1, int y1, int x2, int y2) - moves the piece at (x1,y1) to (x2,y2), removing what was previously on (x2, y2)
+    - void startingPosition() - clears board and goes to starting chess position
+    - int materialDifference() - returns difference of the sums of all of white's material value and black's material value
+    - boolean bothKingsExist() - returns true if White and Black both have a king on the board
+  - **Additional Considerations** (*note*: "I don't know" is an acceptable
+    answer for each of the following questions):
+    - Would this component be mutable? Answer and explain:
+      - Would be mutable since pieces can be added, removed, and moved
+    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
+      Answer and explain:
+      - At the moment, there is a piece subclass, which would have the color, name, and value, though there are probably other ways to represent pieces maybe
+    - Would this component need any enums or constants (e.g.,
+      `Program.Instruction`)? Answer and explain:
+      - Maybe I don't know
+    - Can you implement your secondary methods using your kernel methods?
+      Answer, explain, and give at least one example:
+      - moving is just removing and readding. startingPosition is clearing then adding a bunch of pieces. MaterialDifference should be find since pieceAt can be used to iterate through the board. bothKingsExist can follow a similar logic
 
 ## Post-Assignment
 
@@ -281,7 +297,6 @@ completed the assignment.
 
 ### Changelog
 
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -320,7 +335,7 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
+
 
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
@@ -334,7 +349,7 @@ you have to submit any PDFs.
 
 ### Peer Review
 
-<!-- TODO: review the peer review guidelines then delete this comment -->
+
 
 Following the completion of this assignment, you will be assigned three
 students' component brainstorming assignments for review. Your job during the
@@ -361,7 +376,7 @@ If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
 
-<!-- TODO: follow the link to share your feedback then delete this comment -->
+
 
 [example-components]: https://therenegadecoder.com/code/the-never-ending-list-of-small-programming-project-ideas/
 [markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/
