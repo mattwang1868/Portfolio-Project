@@ -13,3 +13,13 @@ the following form: YYYY.0M.0D.
 - Designed a ComplexNumber component
 - Designed an AlphabetSoup component
 - Designed a ChessEditor component
+
+## 2026.4.1
+
+### Added
+
+- Designed abstract class for AlphabetSoup component
+
+### Updated
+
+- Made hashCode formula to add letter values that are based on their order in the alphabet
