@@ -13,3 +13,14 @@ the following form: YYYY.0M.0D.
 - Designed a ComplexNumber component
 - Designed an AlphabetSoup component
 - Designed a ChessEditor component
+
+## 2026.04.15
+
+### Added
+
+- Designed kernel implementation for AlphabetSoup component
+
+### Updated
+
+- Changed design to allow lowercase letters as parameters to functions
+- Added Iterator for AlphabetSoup1
