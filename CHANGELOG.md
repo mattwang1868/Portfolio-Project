@@ -14,6 +14,7 @@ the following form: YYYY.0M.0D.
 - Designed an AlphabetSoup component
 - Designed a ChessEditor component
 
+
 ## 2026.02.26
 
 ### Added
@@ -23,3 +24,16 @@ the following form: YYYY.0M.0D.
 ### Updated
 
 - Changed design to include kernel method add(char letter) and representation of Sequence1L
+
+
+## 2026.03.10
+
+### Added
+
+- Designed kernel and enhanced interfaces for AlphabetSoup component
+
+### Updated
+
+- Changed design to include secondary method numberOf, which was not in the proof of concept
+- Changed design's intended representation to be capital letters instead of lowercase
+
