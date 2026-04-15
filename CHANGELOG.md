@@ -37,3 +37,13 @@ the following form: YYYY.0M.0D.
 - Changed design to include secondary method numberOf, which was not in the proof of concept
 - Changed design's intended representation to be capital letters instead of lowercase
 
+## 2026.4.1
+
+### Added
+
+- Designed abstract class for AlphabetSoup component
+
+### Updated
+
+- Made hashCode formula to add letter values that are based on their order in the alphabet
+
